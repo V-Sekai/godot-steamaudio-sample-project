@@ -1,9 +1,10 @@
 extends AudioStreamPlayerSteamAudio
 
 @onready var stream_pb : AudioStreamPlaybackSteamAudio
-@onready var mysound : AudioStreamMP3 = preload("res://assets/audio/lone-wolf-10374.mp3")
+@onready var mysound : AudioStreamMP3 
 
 func _ready():
+	mysound = preload("res://assets/audio/lone-wolf-10374.mp3")
 	play()
 	var success = init_source_steamaudio()
 	print("Source Initialized?" + str(success))
